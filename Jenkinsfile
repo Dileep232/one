@@ -4,25 +4,16 @@ pipeline {
     stages {
         stage('git checkout') {
             steps {
+                deleteDir()
                 git branch: 'master',
                 url: 'https://github.com/Dileep232/one.git'   
       
             }
         }
-        stage('Compile') {
+        stage('Build') {
             steps {
-                sh 'mvn compile'
-           }
-        }
-        stage('Test') {
-            steps {
-                sh 'mvn test'
-           }
-        }
-        stage('Package') {
-            steps {
-                sh 'mvn package'
-           }
-        }
+                sh 'mvn clean package'
+             }
        }
-     }
+   }
+ }
