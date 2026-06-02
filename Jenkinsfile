@@ -2,19 +2,11 @@ pipeline {
     agent any
 
     stages {
-        stage('Creating file') {
+        stage('git checkout') {
             steps {
-                sh'touch file1'
-            }
-        }
-        stage('creating Directory') {
-            steps {
-                sh'mkdir dileep'
-            }
-        }
-        stage('Giving permissions') {
-            steps {
-                sh'chmod 777 file1'
+                git branch: 'master',
+                url: 'https://github.com/Dileep232/one.git'   
+      
             }
         }
     }
