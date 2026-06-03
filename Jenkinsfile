@@ -1,7 +1,7 @@
 pipeline {
     agent any
      environment {
-         my value = "$deploye"
+         my value = "$Deploye"
      }
     stages {
         stage('git checkout') {
