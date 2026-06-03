@@ -1,6 +1,8 @@
 pipeline {
     agent any
-
+     environment {
+         my value = "deploye"
+     }
     stages {
         stage('git checkout') {
             steps {
@@ -13,6 +15,11 @@ pipeline {
         stage('Build') {
             steps {
                 sh 'mvn clean package'
+             }
+       }
+        stage('Deploye') {
+            steps {
+                echo "$my value"
              }
        }
    }
