@@ -1,7 +1,7 @@
 pipeline {
     agent any
      environment {
-         my value = "$Deploye"
+         myvalue = "$Deploye"
      }
     stages {
         stage('git checkout') {
@@ -19,7 +19,7 @@ pipeline {
        }
         stage('Deploye') {
             steps {
-                echo "$my value"
+                echo "$myvalue"
              }
        }
    }
