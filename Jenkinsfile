@@ -7,9 +7,7 @@ pipeline {
         stage('git checkout') {
             steps {
                 deleteDir()
-                git branch: 'master',
-                url: 'https://github.com/Dileep232/one.git'   
-      
+                git 'https://github.com/Dileep232/one.git'
             }
         }
         stage('Build') {
@@ -19,6 +17,9 @@ pipeline {
        }
         stage('Deploye') {
             steps {
+                input {
+                    message "if build sucesss then proceed"
+                }
                 echo "$myvalue"
              }
        }
