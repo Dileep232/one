@@ -16,10 +16,10 @@ pipeline {
              }
        }
         stage('Deploye') {
-            steps {
                 input {
                     message "if build sucesss then proceed"
                 }
+                 steps {
                 echo "$myvalue"
              }
        }
