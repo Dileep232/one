@@ -15,13 +15,10 @@ pipeline {
                 sh 'mvn clean package'
              }
        }
-        stage('Deploye') {
-                input {
-                    message "if build sucesss then proceed"
-                }
-                 steps {
-                echo "$myvalue"
+      tage('deploye') {
+            steps {
+                sh 'cp target/*.war /root/apache-tomcat-9.0.118/webapps'
              }
-       }
+       }  
    }
  }
