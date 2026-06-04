@@ -66,7 +66,7 @@
 <body>
 
     <div class="login-container">
-        <h1>School Login</h1>
+        <h1>Office Login</h1>
 
         <form>
             <input type="text" class="input-box" placeholder="Enter Student ID" required>
@@ -77,7 +77,7 @@
         </form>
 
         <div class="footer">
-            © 2026 School Management System
+            © 2026 Office Management System
         </div>
     </div>
 
