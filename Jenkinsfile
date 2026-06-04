@@ -1,8 +1,5 @@
 pipeline {
     agent any
-     environment {
-         myvalue = "$Deploye"
-     }
     stages {
         stage('git checkout') {
             steps {
@@ -15,7 +12,7 @@ pipeline {
                 sh 'mvn clean package'
              }
        }
-      tage('deploye') {
+        stage('deploye') {
             steps {
                 sh 'cp target/*.war /root/apache-tomcat-9.0.118/webapps'
              }
