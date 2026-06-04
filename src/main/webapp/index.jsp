@@ -77,7 +77,7 @@
         </form>
 
         <div class="footer">
-            © 2026 Office Management System
+            © 2026 Office Management 
         </div>
     </div>
 
