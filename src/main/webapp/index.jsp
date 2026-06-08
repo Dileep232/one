@@ -77,7 +77,7 @@
         </form>
 
         <div class="footer">
-            © 2026 Office Management offical
+            © 2026 Office Management offical @gmail.com
         </div>
     </div>
 
