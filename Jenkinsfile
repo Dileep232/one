@@ -1,21 +1,18 @@
 pipeline {
     agent any
+     tools {
+         maven 'maven3'
+     }
     stages {
         stage('git checkout') { 
-         options {
-        timeout(time: 5, unit: 'MINUTES') 
-           }
             steps {
                 deleteDir()
                 git 'https://github.com/Dileep232/one.git'
             }
         }
         stage('Build') {
-             options {
-        timeout(time: 5, unit: 'MINUTES') 
-           }
             steps {
-                sh 'mvn clean package -DskipTests'
+                sh 'mvn clean package'
              }
        }
         stage('deploye') {
