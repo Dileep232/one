@@ -12,10 +12,10 @@ pipeline {
                 sh 'mvn clean package'
              }
        }
-        stage('deploye') {
+        stage('Deploy') {
         steps {
             sshagent(['ssh']) {
-              sh 'scp -o StrictHostKeyChecking=no target/*.war root@18.60.117.140://root/apache-tomcat-9.0.118/webapps/'
+              sh 'scp -o StrictHostKeyChecking=no target/*.war root@18.60.117.140:/root/apache-tomcat-9.0.118/webapps/'
        }
      }
    }
